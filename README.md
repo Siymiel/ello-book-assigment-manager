@@ -57,7 +57,7 @@ The Ello Book Assignment Manager is a React application that allows users to sea
 
 ## Screenshots
 
-![Ello Book Assignment Manager App](public/assets/cover.png)
+![Ello Book Assignment Manager App](./frontend/public/assets/cover.png)
 
 ## Technologies Used
 
