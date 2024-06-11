@@ -1,2 +1,2 @@
-export { default as NotFoundReadingList } from './NotFoundReadingList'
-export { default as NotFoundSearchResults } from './NotFoundSearchResults'
+export { default as NotFoundReadingList } from './NotFoundReadingList';
+export { default as NotFoundSearchResults } from './NotFoundSearchResults';
