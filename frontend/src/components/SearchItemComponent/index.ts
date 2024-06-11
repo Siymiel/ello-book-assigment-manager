@@ -1,1 +1,1 @@
-export { default as SearchItem } from './SearchItemComponent';
+export { default as SearchItem } from "./SearchItemComponent";

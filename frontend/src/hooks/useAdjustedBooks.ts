@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Book } from '../types';
+import { useEffect, useState } from "react";
+import { Book } from "../types";
 
 const useAdjustedBooks = (
   loading: boolean,

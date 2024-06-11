@@ -1,5 +1,5 @@
-import { ApolloError } from '@apollo/client';
-import { Book } from '../../types';
+import { ApolloError } from "@apollo/client";
+import { Book } from "../../types";
 
 export interface SearchBarProps {
   books: Book[];
