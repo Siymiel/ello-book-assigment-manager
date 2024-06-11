@@ -69,6 +69,9 @@ The Ello Book Assignment Manager is a React application that allows users to sea
 
 ## Folder Structure
 ```bash
+.DS_Store
+.gitignore
+README.md
 backend
    |-- .eslintrc.json
    |-- .gitignore
@@ -83,11 +86,12 @@ backend
    |   |   |-- index.ts
    |-- tsconfig.json
 frontend
+   |-- .eslintrc.json
    |-- .gitignore
-   |-- README.md
    |-- package.json
    |-- public
    |   |-- assets
+   |   |   |-- cover.png
    |   |   |-- image1.webp
    |   |   |-- image10.webp
    |   |   |-- image2.webp
@@ -103,7 +107,6 @@ frontend
    |   |-- robots.txt
    |-- src
    |   |-- App.css
-   |   |-- App.test.tsx
    |   |-- App.tsx
    |   |-- components
    |   |   |-- BookItem
