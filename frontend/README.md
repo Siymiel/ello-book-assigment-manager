@@ -1,46 +1,168 @@
-# Getting Started with Create React App
+# Ello Book Assignment Manager
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+The Ello Book Assignment Manager is a React application that allows users to search for books by title, add them to a reading list, and manage the reading list effectively. The app leverages Material-UI for the UI components and integrates with a GraphQL server to fetch book data.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Search Bar**: Allows users to search for books by title. The search results are dynamically filtered as the user types.
+- **Search Results**: Displays book title, author, and a button to add the book to the reading list. Each book result includes an image, title, and author.
+- **Reading List**: Displays a list of books that have been added by the user. Users can also remove books from the reading list.
+- **Responsive UI**: The UI components are styled using Material-UI and are fully responsive.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup and Installation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js and npm installed on your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
 
-### `npm run build`
+1. Navigate to the `ello-book-assignment-manager/backend` directory:
+    ```bash
+    cd ello-book-assignment-manager/backend
+    ```
+2. Install the dependencies:
+    ```bash
+    npm install
+    ```
+3. Start the GraphQL server:
+    ```bash
+    npm start
+    ```
+   This will start a GraphQL server at `http://localhost:4000/`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Navigate to the `ello-book-assignment-manager/frontend` directory:
+    ```bash
+    cd ello-book-assignment-manager/frontend
+    ```
+2. Install the dependencies:
+    ```bash
+    npm install
+    ```
+3. Start the React application:
+    ```bash
+    npm start
+    ```
+   This will start the frontend application at `http://localhost:3000/`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1. **Search for Books**: Use the search bar at the top of the page to search for books by their title.
+2. **Add Books to Reading List**: Click the "Add" button next to a book in the search results to add it to your reading list.
+3. **Manage Reading List**: View the reading list at the bottom of the page. Click the "Remove" button to remove a book from the list.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Screenshots
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Ello Book Assignment Manager App](public/assets/cover.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Technologies Used
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
+- **Material-UI**: React components for faster and easier web development.
+- **GraphQL**: Query language for your API.
+- **Apollo Client**: Comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL.
 
-## Learn More
+## Folder Structure
+```bash
+.DS_Store
+backend
+   |-- .eslintrc.json
+   |-- .gitignore
+   |-- package.json
+   |-- src
+   |   |-- app.ts
+   |   |-- data
+   |   |   |-- books.ts
+   |   |-- resolvers
+   |   |   |-- index.ts
+   |   |-- schema
+   |   |   |-- index.ts
+   |-- tsconfig.json
+frontend
+   |-- .gitignore
+   |-- README.md
+   |-- package.json
+   |-- public
+   |   |-- assets
+   |   |   |-- image1.webp
+   |   |   |-- image10.webp
+   |   |   |-- image2.webp
+   |   |   |-- image3.webp
+   |   |   |-- image4.webp
+   |   |   |-- image5.webp
+   |   |   |-- image6.webp
+   |   |   |-- image7.webp
+   |   |   |-- image8.webp
+   |   |   |-- image9.webp
+   |   |-- index.html
+   |   |-- manifest.json
+   |   |-- robots.txt
+   |-- src
+   |   |-- App.css
+   |   |-- App.test.tsx
+   |   |-- App.tsx
+   |   |-- components
+   |   |   |-- BookItem
+   |   |   |   |-- BookItem.tsx
+   |   |   |   |-- index.ts
+   |   |   |   |-- types.ts
+   |   |   |-- NavBar
+   |   |   |   |-- NavBar.tsx
+   |   |   |   |-- SecondaryNavBar.tsx
+   |   |   |   |-- index.ts
+   |   |   |   |-- types.ts
+   |   |   |-- NotFound
+   |   |   |   |-- NotFoundReadingList.tsx
+   |   |   |   |-- NotFoundSearchResults.tsx
+   |   |   |   |-- index.ts
+   |   |   |-- ReadingList
+   |   |   |   |-- ReadingList.tsx
+   |   |   |   |-- index.ts
+   |   |   |   |-- types.ts
+   |   |   |-- SearchBar
+   |   |   |   |-- SearchBar.css
+   |   |   |   |-- SearchBar.tsx
+   |   |   |   |-- index.ts
+   |   |   |   |-- types.ts
+   |   |   |-- SearchInput
+   |   |   |   |-- SearchInput.tsx
+   |   |   |   |-- index.ts
+   |   |   |   |-- types.ts
+   |   |   |-- SearchItemComponent
+   |   |   |   |-- SearchItemComponent.tsx
+   |   |   |   |-- index.ts
+   |   |   |   |-- types.ts
+   |   |   |-- index.ts
+   |   |-- hooks
+   |   |   |-- index.ts
+   |   |   |-- useAdjustedBooks.ts
+   |   |   |-- useAvatarColor.ts
+   |   |-- index.css
+   |   |-- index.tsx
+   |   |-- react-app-env.d.ts
+   |   |-- setupTests.ts
+   |   |-- theme
+   |   |   |-- index.ts
+   |   |   |-- theme.ts
+   |   |-- types.ts
+   |   |-- utils
+   |   |   |-- client.ts
+   |-- tsconfig.json
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are welcome! Please create a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any inquiries, please contact Samuel Kinuthia at skinuthia77@gmail.com.
