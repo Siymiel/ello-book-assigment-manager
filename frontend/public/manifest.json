@@ -1,0 +1,10 @@
+{
+  "short_name": "Book Assigment",
+  "name": "Ello Book Assignment Manager",
+  "author": "Samuel Kinuthia",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": []
+}
