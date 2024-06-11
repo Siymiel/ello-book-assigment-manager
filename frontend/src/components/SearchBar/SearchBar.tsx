@@ -4,12 +4,18 @@ import { Book } from "../../types";
 import { SearchBarProps } from "./types";
 import { SearchItem } from "../SearchItemComponent";
 import { SearchInput } from "../SearchInput";
-import './SearchBar.css';
+import "./SearchBar.css";
 import { NotFoundSearchResults } from "../NotFound";
-import SearchOffIcon from '@mui/icons-material/SearchOff';
-import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import SearchOffIcon from "@mui/icons-material/SearchOff";
+import ReportProblemIcon from "@mui/icons-material/ReportProblem";
 
-const SearchBar: React.FC<SearchBarProps> = ({ books, onAdd, loading, error, setShowOverlay }) => {
+const SearchBar: React.FC<SearchBarProps> = ({
+  books,
+  onAdd,
+  loading,
+  error,
+  setShowOverlay,
+}) => {
   const [inputValue, setInputValue] = useState<string>("");
   const [filteredBooks, setFilteredBooks] = useState<Book[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -59,7 +65,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ books, onAdd, loading, error, set
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -71,7 +77,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ books, onAdd, loading, error, set
       />
       {inputValue.length > 0 && (
         <div className="filtered-books-container">
-          {!loading && filteredBooks.length === 0 && (
+          {!loading && !error && filteredBooks.length === 0 && (
             <NotFoundSearchResults
               icon={SearchOffIcon}
               subtitle="Book not found"
@@ -86,9 +92,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ books, onAdd, loading, error, set
           {filteredBooks.length > 0 && (
             <div className="filtered-books">
               <Paper elevation={3}>
-                <List sx={{ padding: '0' }}>
+                <List sx={{ padding: "0" }}>
                   {filteredBooks.map((book) => (
-                    <SearchItem key={book.id} book={book} handleAddBook={handleAddBook} />
+                    <SearchItem
+                      key={book.id}
+                      book={book}
+                      handleAddBook={handleAddBook}
+                    />
                   ))}
                 </List>
               </Paper>

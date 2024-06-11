@@ -17,11 +17,15 @@ const SearchInput: React.FC<SearchInputProps> = ({
       fullWidth
       value={inputValue}
       onChange={handleInputChange}
-      style={{ marginBottom: "5px", backgroundColor: theme.palette.common.white, borderRadius: "5px"}}
+      style={{
+        marginBottom: "5px",
+        backgroundColor: theme.palette.common.white,
+        borderRadius: "5px",
+      }}
       placeholder="Enter book title..."
       InputLabelProps={{
         sx: {
-          fontWeight: 'bold',
+          fontWeight: "bold",
         },
       }}
       InputProps={{

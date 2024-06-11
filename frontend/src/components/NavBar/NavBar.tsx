@@ -19,7 +19,11 @@ export default function NavBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ color: theme.palette.common.white }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ color: theme.palette.common.white }}
+          >
             Ello Book Assignment Manager
           </Typography>
         </Toolbar>

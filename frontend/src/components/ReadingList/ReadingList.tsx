@@ -1,15 +1,19 @@
-import React from 'react';
-import { Grid } from '@mui/material';
-import { ReadingListProps } from './types';
-import { BookItem } from '../BookItem';
-import { NotFoundReadingList } from '../NotFound';
-import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import React from "react";
+import { Grid } from "@mui/material";
+import { ReadingListProps } from "./types";
+import { BookItem } from "../BookItem";
+import { NotFoundReadingList } from "../NotFound";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 
 const ReadingList: React.FC<ReadingListProps> = ({ books, onRemove }) => {
   return (
-    <Grid container spacing={3} style={{ marginTop: '1px', marginBottom: '40px' }}>
+    <Grid
+      container
+      spacing={3}
+      style={{ marginTop: "1px", marginBottom: "40px" }}
+    >
       {books.length > 0 ? (
-        books.map(book => (
+        books.map((book) => (
           <BookItem key={book.id} book={book} onRemove={onRemove} />
         ))
       ) : (

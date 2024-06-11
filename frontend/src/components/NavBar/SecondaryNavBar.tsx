@@ -10,12 +10,16 @@ import { theme } from "../../theme";
 import { SecondaryNavBarProps } from "./types";
 
 const SecondaryNavBar: React.FC<SecondaryNavBarProps> = ({ count }) => {
-      
   return (
     <Box sx={{ flexGrow: 1, marginBottom: "10px", marginTop: "10px" }}>
       <AppBar position="static" sx={{ backgroundColor: "#335C6E" }}>
-        <Toolbar variant="dense" sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <Box sx={{ display: "flex", flexDirection: 'row', alignItems: "center" }}>
+        <Toolbar
+          variant="dense"
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <Box
+            sx={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+          >
             <IconButton
               edge="start"
               aria-label="menu"

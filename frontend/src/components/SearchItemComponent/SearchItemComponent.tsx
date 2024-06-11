@@ -1,12 +1,12 @@
 import { Grid, ListItem, ListItemText, Button } from "@mui/material";
 import { ListItemProps } from "./types";
 
-const SearchItemComponent: React.FC<ListItemProps> = ({ book, handleAddBook }) => {
+const SearchItemComponent: React.FC<ListItemProps> = ({
+  book,
+  handleAddBook,
+}) => {
   return (
-    <ListItem
-      key={book.id}
-      style={{ borderBottom: "1px solid #28B8B8" }}
-    >
+    <ListItem key={book.id} style={{ borderBottom: "1px solid #28B8B8" }}>
       <Grid container alignItems="center" spacing={1}>
         <Grid item xs={1}>
           <img

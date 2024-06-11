@@ -1,6 +1,6 @@
-import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
-import { styled } from '@mui/system';
+import React from "react";
+import { Card, CardContent, Typography } from "@mui/material";
+import { styled } from "@mui/system";
 
 interface NotFoundProps {
   icon?: React.ElementType<any>;
@@ -10,20 +10,24 @@ interface NotFoundProps {
 
 const StyledCard = styled(Card)(({ theme }) => ({
   maxWidth: 400,
-  margin: 'auto',
+  margin: "auto",
   marginTop: theme.spacing(8),
-  backgroundColor: '#FFE6DC',
+  backgroundColor: "#FFE6DC",
 }));
 
-const CenteredContent = styled('div')({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  textAlign: 'center',
+const CenteredContent = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  textAlign: "center",
 });
 
-const NotFoundReadingList: React.FC<NotFoundProps> = ({ icon: Icon, title, subtitle }) => {
+const NotFoundReadingList: React.FC<NotFoundProps> = ({
+  icon: Icon,
+  title,
+  subtitle,
+}) => {
   return (
     <StyledCard>
       <CardContent>
@@ -32,11 +36,7 @@ const NotFoundReadingList: React.FC<NotFoundProps> = ({ icon: Icon, title, subti
           <Typography variant="h5" component="div" gutterBottom>
             {title}
           </Typography>
-          {subtitle && (
-            <Typography variant="body1">
-              {subtitle}
-            </Typography>
-          )}
+          {subtitle && <Typography variant="body1">{subtitle}</Typography>}
         </CenteredContent>
       </CardContent>
     </StyledCard>
