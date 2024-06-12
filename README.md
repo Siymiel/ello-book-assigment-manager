@@ -48,6 +48,10 @@ The Ello Book Assignment Manager is a React application that allows users to sea
     npm start
     ```
    This will start the frontend application at `http://localhost:3000/`.
+4. Run unit tests:
+    ```bash
+    npm run test
+    ```
 
 ## Usage
 
