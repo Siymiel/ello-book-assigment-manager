@@ -15,7 +15,7 @@ const BookItem: React.FC<BookItemProps> = ({ book, onRemove }) => {
   const avatarColor = useAvatarColor(book.readingLevel);
 
   return (
-    <Grid item xs={12} sm={6} md={4}>
+    <Grid item xs={12} sm={6} md={4} data-testid="book-item">
       <Card sx={{ border: "2px solid #4AA088", boxShadow: "none" }}>
         <CardHeader
           titleTypographyProps={{ variant: "subtitle2", fontSize: "0.9rem" }}

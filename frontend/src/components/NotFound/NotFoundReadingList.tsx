@@ -33,7 +33,7 @@ const NotFoundReadingList: React.FC<NotFoundProps> = ({
       <CardContent>
         <CenteredContent>
           {Icon && <Icon style={{ fontSize: 100, marginBottom: 16 }} />}
-          <Typography variant="h5" component="div" gutterBottom>
+          <Typography variant="h5" component="div" gutterBottom role="heading"> 
             {title}
           </Typography>
           {subtitle && <Typography variant="body1">{subtitle}</Typography>}

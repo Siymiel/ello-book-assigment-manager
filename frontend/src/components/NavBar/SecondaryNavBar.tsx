@@ -22,7 +22,7 @@ const SecondaryNavBar: React.FC<SecondaryNavBarProps> = ({ count }) => {
           >
             <IconButton
               edge="start"
-              aria-label="menu"
+              aria-label="collections-bookmark-icon"
               sx={{ mr: 1, color: theme.palette.common.white }}
             >
               <CollectionsBookmarkIcon />
@@ -38,7 +38,7 @@ const SecondaryNavBar: React.FC<SecondaryNavBarProps> = ({ count }) => {
 
           <IconButton
             edge="start"
-            aria-label="menu"
+            aria-label="filter-list-icon"
             sx={{
               color: theme.palette.common.white,
             }}
