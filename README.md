@@ -90,7 +90,6 @@ backend
    |   |   |-- index.ts
    |-- tsconfig.json
 frontend
-   |-- .eslintrc.json
    |-- .gitignore
    |-- package.json
    |-- public
@@ -115,19 +114,29 @@ frontend
    |   |-- components
    |   |   |-- BookItem
    |   |   |   |-- BookItem.tsx
+   |   |   |   |-- __tests__
+   |   |   |   |   |-- BookItem.test.tsx
    |   |   |   |-- index.ts
    |   |   |   |-- types.ts
    |   |   |-- NavBar
    |   |   |   |-- NavBar.tsx
    |   |   |   |-- SecondaryNavBar.tsx
+   |   |   |   |-- __tests__
+   |   |   |   |   |-- NavBar.test.tsx
+   |   |   |   |   |-- SecondaryNavBar.test.tsx
    |   |   |   |-- index.ts
    |   |   |   |-- types.ts
    |   |   |-- NotFound
    |   |   |   |-- NotFoundReadingList.tsx
    |   |   |   |-- NotFoundSearchResults.tsx
+   |   |   |   |-- __tests__
+   |   |   |   |   |-- NotFoundReadingList.test.tsx
+   |   |   |   |   |-- NotFoundSearchResults.test.tsx
    |   |   |   |-- index.ts
    |   |   |-- ReadingList
    |   |   |   |-- ReadingList.tsx
+   |   |   |   |-- __tests__
+   |   |   |   |   |-- ReadingList.test.tsx
    |   |   |   |-- index.ts
    |   |   |   |-- types.ts
    |   |   |-- SearchBar
@@ -137,14 +146,21 @@ frontend
    |   |   |   |-- types.ts
    |   |   |-- SearchInput
    |   |   |   |-- SearchInput.tsx
+   |   |   |   |-- __tests__
+   |   |   |   |   |-- SearchInput.test.tsx
    |   |   |   |-- index.ts
    |   |   |   |-- types.ts
    |   |   |-- SearchItemComponent
    |   |   |   |-- SearchItemComponent.tsx
+   |   |   |   |-- __tests__
+   |   |   |   |   |-- SearchItemComponent.tsx
    |   |   |   |-- index.ts
    |   |   |   |-- types.ts
    |   |   |-- index.ts
    |   |-- hooks
+   |   |   |-- __tests__
+   |   |   |   |-- useAdjustedBooks.test.ts
+   |   |   |   |-- useAvatarColor.test.ts
    |   |   |-- index.ts
    |   |   |-- useAdjustedBooks.ts
    |   |   |-- useAvatarColor.ts
