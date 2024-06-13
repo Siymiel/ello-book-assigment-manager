@@ -16,6 +16,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
       variant="outlined"
       fullWidth
       value={inputValue}
+      autoComplete="off"
       onChange={handleInputChange}
       style={{
         marginBottom: "5px",
